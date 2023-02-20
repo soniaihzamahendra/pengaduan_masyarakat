@@ -11,8 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pengaduans', function (Blueprint $table) {
+        Schema::create('pengaduan', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_pengaduan');
+            $table->date('tgl_pengaduan');
+            $table->string('nik', 16);
+            $table->text('isi_laporan');
+            $table->string('foto', 255);
+            $table->enum('status',['0','proses','selesai']);
             $table->timestamps();
         });
     }
