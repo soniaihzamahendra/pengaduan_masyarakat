@@ -178,14 +178,14 @@
                           <div class="pcoded-navigation-label" data-i18n="nav.category.forms">Data User</div>
                           <ul class="pcoded-item pcoded-left-item">
                               <li>
-                                  <a href="form-elements-component.html" class="waves-effect waves-dark">
+                                  <a href="{{ url('petugas') }}" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.form-components.main">Petugas</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                               </li>
                               <li>
-                                  <a href="bs-basic-table.html" class="waves-effect waves-dark">
+                                  <a href="{{ url('masyarakat') }}" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.form-components.main">Masyarakat</span>
                                       <span class="pcoded-mcaret"></span>
@@ -204,6 +204,13 @@
                                   </a>
                               </li>
                               <li>
+                                <a href="{{ url('tanggapan') }}" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Tanggapan</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                              <li>
                                   <a href="map-google.html" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.form-components.main">Generate Laporan</span>
@@ -220,14 +227,14 @@
                               <div class="row align-items-center">
                                   <div class="col-md-8">
                                       <div class="page-header-title">
-                                          <h5 class="m-b-10">Dashboard</h5>
+                                          <h5 class="m-b-10">Pengaduan Masyarakat</h5>
                                           <p class="m-b-0">Welcome to Pengaduan Masyarakat</p>
                                       </div>
                                   </div>
                                   <div class="col-md-4">
                                       <ul class="breadcrumb-title">
                                           <li class="breadcrumb-item">
-                                              <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                              <a href="{{ url('dashboard') }}"> <i class="fa fa-home"></i> </a>
                                           </li>
                                           <li class="breadcrumb-item"><a href="#!">Dashboard</a>
                                           </li>

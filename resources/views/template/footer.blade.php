@@ -36,7 +36,7 @@
     <script type="text/javascript" src="assets/pages/dashboard/custom-dashboard.js"></script>
     <script type="text/javascript" src="assets/js/script.js "></script>
 
-@method('script')
+@stack('script')
 </body>
 
 </html>
