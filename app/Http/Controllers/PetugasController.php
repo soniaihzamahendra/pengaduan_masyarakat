@@ -46,7 +46,6 @@ class PetugasController extends Controller
         $Petugas->telp=$request->telp;
         $Petugas->level='petugas';
         $Petugas->save();
-        
 
         return redirect('petugas')->with('success','Data Petugas berhasil ditambahkan!');
     }
