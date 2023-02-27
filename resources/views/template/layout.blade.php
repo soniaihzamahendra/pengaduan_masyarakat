@@ -114,7 +114,8 @@
                           </div>
                       </div>
                       <a href="index.html">
-                          <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
+                          <img class="img-fluid" src="assets/images/logodw.png" alt="Theme-Logo" />
+                          Pengaduan
                       </a>
                       <a class="mobile-options waves-effect waves-light">
                           <i class="ti-more"></i>
@@ -162,7 +163,7 @@
                                 <ul>
                                     <li class="more-details">
                                         <a href="user-profile.html"><i class="ti-user"></i>View Profile</a>
-                                        <a href="auth-normal-sign-in.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                        <a href="{{ url('logout') }}"><i class="nav-icon fa fa-power-off"></i>Logout</a>
                                     </li>
                                 </ul>
                             </div>

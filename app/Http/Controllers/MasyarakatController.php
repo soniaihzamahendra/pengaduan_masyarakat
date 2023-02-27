@@ -37,9 +37,16 @@ class MasyarakatController extends Controller
      */
     public function store(StoreMasyarakatRequest $request)
     {
-        $request['id'] = auth()->user()->id;
-        $input = Masyarakat::create($request->all());
-        return redirect(request()->segment(1).'/masyarakat')->with('success','input data masyarakat berhasil');
+
+        $Masyarakat =new Masyarakat();
+        $Masyarakat->nik=$request->nik;
+        $Masyarakat->nama=$request->nama;
+        $Masyarakat->username=$request->username;
+        $Masyarakat->password=bcrypt($request->password);
+        $Masyarakat->telp=$request->telp;
+        $Masyarakat->save();
+
+        return redirect('masyarakat')->with('success','Data Masyarakat berhasil ditambahkan!');
     }
 
     /**
@@ -73,17 +80,23 @@ class MasyarakatController extends Controller
      */
     public function update(UpdateMasyarakatRequest $request, Masyarakat $Masyarakat)
     {
-      
+        $Masyarakat->update($request->all());
+
+        return redirect('masyarakat')->with('success', 'masyarakat berhasil diupdate');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Masyarakat  $Masyarakat
+     * @param  \App\Models\masyarakat  $Masyarakat
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-      
+        // return $id;
+        //  $id->delete();
+        masyarakat::find($id)->delete();
+
+        return redirect('masyarakat')->with('success', 'masyarakat berhasil dihapus');
     }
 }

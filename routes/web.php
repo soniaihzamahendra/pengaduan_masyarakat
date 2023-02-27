@@ -14,4 +14,6 @@ Route::resource('masyarakat', MasyarakatController::class);
 
 //login
 Route::get('/login', [UserController::class,'index'])->name('login');
-Route::post('/login',[UserController::class, 'cekLogin'])->name('cekLogin');
+Route::post('/login/cek',[UserController::class, 'cekLogin'])->name('cekLogin');
+//logout
+Route::get('/logout',[UserController::class, 'logout'])->name('logout');
